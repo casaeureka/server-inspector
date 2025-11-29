@@ -1,0 +1,41 @@
+---
+name: Release
+
+"on":
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build zipapp executable
+        run: |
+          bash build-release.sh
+
+      - name: Create tarball with executable and docs
+        run: |
+          mkdir -p release-package
+          cp server-inspector.pyz release-package/server-inspector.py
+          cp LICENSE release-package/
+          cp README.md release-package/
+          tar -czf server-inspector-${{ github.ref_name }}-linux.tar.gz -C release-package .
+          ls -lh server-inspector-*.tar.gz
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            server-inspector-*.tar.gz
+          draft: false
+          prerelease: false
+          generate_release_notes: true
