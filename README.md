@@ -4,7 +4,7 @@ Hardware detection and inventory tool.
 
 ## Purpose
 
-Automatically detects and inventories server hardware:
+Automatically detects and inventories  hardware:
 
 - CPU information
 - Memory configuration
