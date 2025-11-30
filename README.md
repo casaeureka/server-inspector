@@ -1,6 +1,6 @@
 # server-inspector
 
-Hardware detection and inventory tool for server.
+Hardware detection and inventory tool.
 
 ## Purpose
 
