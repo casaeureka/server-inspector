@@ -130,6 +130,8 @@ class ServerInspector:
                 json.dump(self.specs, f, indent=2)
             # Atomic rename
             os.replace(temp_path, output_file)
+            # Sync to ensure data is flushed to disk (critical for USB)
+            os.sync()
             print_success(f"Saved to: {output_file}")
         except Exception:
             # Clean up temp file on error
