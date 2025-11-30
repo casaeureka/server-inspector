@@ -18,14 +18,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build zipapp executable
-        run: |
-          bash build-release.sh
-
-      - name: Create tarball with executable and docs
+      - name: Create release tarball
         run: |
           mkdir -p release-package
-          cp server-inspector.pyz release-package/server-inspector.py
+          cp -r src release-package/
+          cp server-inspector.py release-package/
           cp LICENSE release-package/
           cp README.md release-package/
           tar -czf server-inspector-${{ github.ref_name }}-linux.tar.gz -C release-package .

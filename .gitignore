@@ -79,5 +79,4 @@ result-*
 
 # Project-specific
 home-server-specs.json
-*.pyz
 release-package/
