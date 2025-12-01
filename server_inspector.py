@@ -4,7 +4,7 @@ Server Inspector
 Automatically detects and inventories hardware for server
 
 Usage:
-  sudo python3 server-inspector.py [--output FILE]
+  sudo python3 server_inspector.py [--output FILE]
 
 Requirements:
   - Must run as root for full hardware access

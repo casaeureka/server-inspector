@@ -62,7 +62,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-"**/server-inspector.py" = ["E501"]
+"**/server_inspector.py" = ["E501"]
 
 [tool.ruff.lint.isort]
 section-order = [

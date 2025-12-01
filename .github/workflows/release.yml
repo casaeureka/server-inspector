@@ -46,7 +46,7 @@ jobs:
         run: |
           mkdir -p release-package
           cp -r src release-package/
-          cp server-inspector.py release-package/
+          cp server_inspector.py release-package/
           cp LICENSE release-package/
           cp README.md release-package/
           tar -czf server-inspector-${{ github.ref_name }}-linux.tar.gz -C release-package .

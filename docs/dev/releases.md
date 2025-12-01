@@ -33,6 +33,6 @@ After releasing, update version in projects that use this tool.
 Each release includes:
 
 - `server-inspector-{version}-linux.tar.gz`
-  - Script: `server-inspector.py`
+  - Script: `server_inspector.py`
   - `LICENSE`
   - `README.md`

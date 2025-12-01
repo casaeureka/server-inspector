@@ -59,7 +59,7 @@ class ServerInspector:
         # Check if running as root
         if os.geteuid() != 0:
             print_warning("Not running as root - some details will be limited")
-            print_warning("Run with: sudo python3 server-inspector.py")
+            print_warning("Run with: sudo python3 server_inspector.py")
             print()
 
         # Show available dependencies

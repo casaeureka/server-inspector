@@ -22,10 +22,10 @@ Automatically detects and inventories  hardware:
 
 ```bash
 # Basic inspection (outputs to stdout)
-sudo server-inspector.py
+sudo python3 server_inspector.py
 
 # Save to file
-sudo server-inspector.py --output hardware.yml
+sudo python3 server_inspector.py --output hardware.yml
 ```
 
 ## Requirements
